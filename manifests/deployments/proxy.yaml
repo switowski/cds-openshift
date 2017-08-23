@@ -14,9 +14,9 @@ spec:
         pod.beta.kubernetes.io/init-containers: '[
             {
                 "name": "install",
-                "image": "switowski/cds-web",
+                "image": "switowski/cds-web:0.0.6",
                 "imagePullPolicy": "IfNotPresent",
-                "command": ["cp", "-R", "/usr/local/var/cds-instance/static", "/static"],
+                "command": ["cp", "-R", "/usr/local/var/instance/static", "/static"],
                 "volumeMounts": [
                     {
                       "name": "static",
