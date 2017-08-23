@@ -80,3 +80,8 @@ $ oc exec POD-ID echo 'hello world!'
 $ oc types #Returns a cheatsheet of OpenShift with explanation of how it works
 $ oc explain RESOURCE# Gives details about a specific resource (like `oc types` but you can specify the type of resource here)
 $ oc describe TYPE-OF-RESOURCE# Gives a detailed information about the resource (e.g. a deployment config)
+
+## Resources:
+* jbenito3's docker configuration for Invenio: https://github.com/jbenito3/invenio/tree/openshift
+* template persistent redis container (could be used instead of mounting the volume, but mounting also works good): https://github.com/weepee-org/openshift-redis-persistent
+* Supporting arbitrary user ID (why it's an issue: https://cern.service-now.com/service-portal/article.do?n=KB0004574): https://docs.openshift.org/latest/creating_images/guidelines.html#openshift-origin-specific-guidelines (more examples on nss wrapper that is also fixing this issue: https://gitlab.cern.ch/ci-tools/ci-worker/blob/master/ci-base/contrib/openshift/run-jnlp-client#L12)
